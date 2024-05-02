@@ -129,5 +129,19 @@ Ramé Game , oyunculara eğlenceli ve bağımlılık yaratan oyunlar sunan bir y
 
 - *Epic Games:* Bilgisayar ve konsol oyunları geliştiren bir şirket. Avantajları arasında güçlü teknoloji altyapısı ve büyük ölçekli oyun projeleri bulunur.
 
+## Q4 : İyileştirme (optimizasyon) stratejisi
+
+*Projenin son döneminde R kodu yazarak yapılacak veri analizi ile şu faydalar sağlanabilir:*
+
+- **Oyuncu Etkileşim Verilerinin Analizi:** Ramé Game, mobil oyunlarındaki oyuncu etkileşim verilerini analiz ederek, oyuncuların oyunlarla nasıl etkileşimde bulunduğunu anlayabiliriz. Bu analiz, oyuncu davranışlarını anlamak ve oyun deneyimini iyileştirmek için değerli içgörüler sağlayabilir. Örneğin, hangi seviyelerin oyuncuların en çok ilgisini çektiği veya hangi özelliklerin daha az kullanıldığı gibi bilgiler, oyunların daha cazip hale getirilmesine yardımcı olabilir.
+
+- **Oyun Performans Verilerinin İncelenmesi:** Ramé Game’in geliştirdiği oyunların performans verilerini analiz ederek, oyunların genel performansını değerlendirebiliriz. Örneğin, oyunlardaki ortalama oyun süresi, oyun içi satın alma oranları veya oyuncuların belirli seviyelerde sıkışıp kaldığı noktalar gibi faktörler incelenebilir. Bu analiz, oyunların kullanıcı deneyimini iyileştirmek için gereken düzeltmelerin belirlenmesine yardımcı olabilir.
+
+- **Pazarlama Verilerinin Değerlendirilmesi:** Ramé Game’in pazarlama kampanyalarının etkinliğini değerlendirmek için pazarlama verilerini analiz edebiliriz. Örneğin, farklı pazarlama kanallarının dönüşüm oranları veya belirli bir kampanyanın kullanıcı geri dönüşleri üzerindeki etkisi gibi veriler incelenebilir. Bu analiz, pazarlama stratejilerinin optimize edilmesine ve daha etkili kampanyaların oluşturulmasına yardımcı olabilir.
+
+- **Karlılık Analizi:** Ramé Game’in geliştirdiği oyunların maliyetleri ile elde edilen gelirleri karşılaştırarak karlılık analizi yapılabilir. Bu analiz, hangi oyunların şirket için en karlı olduğunu belirlemeye ve kaynakların doğru şekilde dağıtılmasına yardımcı olabilir.
+
+Bu analizlerin sonuçlarına dayanarak, şirketin oyun geliştirme sürecini optimize etmesi, kullanıcı deneyimini iyileştirmesi, pazarlama stratejilerini optimize etmesi ve karlılığını artırması beklenmektedir.
+
 
 
