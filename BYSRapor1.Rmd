@@ -1,0 +1,46 @@
+---
+title: "Bilgi Yönetim Sistemi Rapor I"
+output: html_document
+date: "2024-04-30"
+---
+
+
+## Q1 : IMS platformunun belirlenmesi
+
+**Platformun İsmi:** Salesforce
+
+**Lisansı:** Salesforce'un lisans modelleri çeşitli özelliklere, kullanıcı sayısına ve işletmenin ihtiyaçlarına göre farklılık gösterir. Temel lisans türleri Sales Cloud, Service Cloud, Marketing Cloud, Commerce Cloud ve daha birçok özel işlevsellik sunan lisanslar içerir.
+
+**Kısa Tarihçesi: **Salesforce, 1999 yılında Marc Benioff ve Parker Harris tarafından kuruldu. İlk olarak bulut tabanlı CRM hizmeti sunan şirket, o zamandan beri büyüyerek dünyanın önde gelen CRM sağlayıcılarından biri haline geldi. Günümüzde, Salesforce birçok farklı endüstride ve işletme boyutunda milyonlarca müşteriye hizmet vermektedir.
+
+**Platformun Kullanıcıya Sunduğu Özellikler:**
+
+- Müşteri ilişkilerini yönetme (müşteri bilgileri, iletişim geçmişi, satış fırsatları vb.).
+
+- Satış yönetimi (satış fırsatları izleme, teklifler oluşturma, satış hunisi yönetimi vb.).
+
+- Pazarlama otomasyonu (pazarlama kampanyaları oluşturma, e-posta pazarlama, sosyal medya yönetimi vb.).
+
+- Müşteri desteği ve hizmet yönetimi (müşteri taleplerini izleme, sorunları çözme, destek süreçlerini otomatikleştirme vb.).
+
+- Analitik ve raporlama (veri analizi, performans raporları oluşturma, tahminler yapma vb.)
+
+**Platformun Kullandığı Yazılım,** Veritabanı ve Diğer Teknolojiler: Salesforce, bulut tabanlı bir platform olduğu için Salesforce Platform'u (eski adıyla Force.com) üzerinde çalışır. Veritabanı olarak çoklu kiracılık prensibiyle çalışan ve ölçeklenebilirlik sağlayan Oracle veritabanını kullanır. Ayrıca, Salesforce'un birçok farklı yazılım geliştirme dili ve teknolojisiyle entegre olabilme yeteneği bulunur.
+
+Salesforce, REST API ve SOAP API gibi farklı API'lar sunar. Bu API'lar aracılığıyla platforma entegrasyon yapılabilir, veri alışverişi sağlanabilir, özel uygulamalar geliştirilebilir ve iş süreçleri otomatikleştirilebilir. Özellikle Salesforce'un REST API'si, kolay kullanımı ve geniş yetenekleriyle dikkat çeker.
+
+**IMS Kategorisi / Platform Seçiminizde Rol Oynayan Sebepler:**
+
+- **Özel İlgi Alanları:** Müşteri ilişkileri yönetimi ve satış/pazarlama süreçlerine odaklanmış işletmeler için Salesforce, geniş özellik yelpazesiyle öne çıkar. Özellikle büyük ölçekli işletmeler için ölçeklenebilirlik ve geniş entegrasyon seçenekleri önemlidir.
+
+- **Daha Önceki Deneyimler:** Salesforce, geniş kullanıcı tabanına sahip olduğu için birçok kişinin daha önce deneyimlemiş olma olasılığı yüksektir. Bu da eğitim ve benimseme süreçlerini kolaylaştırır.
+
+- **Sektör Hacmi ve Popülerliği:** Salesforce, dünya genelinde birçok farklı endüstride yaygın olarak kullanılan lider bir CRM platformudur. Bu da sağladığı çözümlerin güvenilirliğini ve etkinliğini destekler.
+
+- **Entegrasyon Yetenekleri:** Salesforce, birçok farklı yazılım ve hizmetle entegre olabilme yeteneğiyle öne çıkar. İşletmelerin mevcut sistemleriyle sorunsuz bir şekilde entegre olabilmesi, verimliliği artırabilir ve veri bütünlüğünü sağlayabilir.
+
+Bu faktörler göz önüne alındığında, Salesforce'un geniş özellik yelpazesi, ölçeklenebilirlik ve entegrasyon yetenekleri, bir IMS kategorisi/CRM platformu seçiminde önemli rol oynayabilir.
+
+
+
+
