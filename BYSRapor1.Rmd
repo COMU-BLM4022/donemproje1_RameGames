@@ -41,6 +41,52 @@ Salesforce, REST API ve SOAP API gibi farklı API'lar sunar. Bu API'lar aracıl�
 
 Bu faktörler göz önüne alındığında, Salesforce'un geniş özellik yelpazesi, ölçeklenebilirlik ve entegrasyon yetenekleri, bir IMS kategorisi/CRM platformu seçiminde önemli rol oynayabilir.
 
+## Q2 : Dataset tanımı
+
+- *https://www.kaggle.com/datasets/asaniczka/video-game-sales-2024*
+
+Bu veri seti, çeşitli video oyunlarının özelliklerini ve satış verilerini içerir. Her bir satır, bir video oyununu temsil ederken, her sütun bir özellik veya bilgiyi içerir. Veri setinde oyunların adı, çıktığı platform, türü, yayıncısı, geliştiricisi, eleştirmen puanı, toplam satış miktarı ve bölgesel satış miktarları gibi bilgiler bulunmaktadır. Ayrıca, oyunların piyasaya çıkış tarihi ve veri setinin son güncelleme tarihi de yer almaktadır. Bu veri seti, video oyunu endüstrisindeki trendleri analiz etmek, popüler oyunları belirlemek ve oyunların satış performansını incelemek için kullanılabilir.
+
+**Veri Seti Sütun Bilgileri :**
+
+- <span style="color:blue;">*img:*</span> Oyunun kutu kapak resminin URL'sini içerir.
+
+- <span style="color:blue;">*title:*</span> Oyunun adını içerir.
+
+- <span style="color:blue;">*console:*</span> Oyunun çıktığı oyun konsolunu veya platformunu içerir (PS3, PS4, X360, vb.).
+
+- <span style="color:blue;">*genre:*</span> Oyunun türünü içerir (Aksiyon, Nişancı, Macera, vb.).
+
+- <span style="color:blue;">*publisher:*</span> Oyunun yayıncı şirketini içerir.
+
+- <span style="color:blue;">*developer:*</span> Oyunun geliştiricisi veya stüdyosunu içerir.
+
+- <span style="color:blue;">*critic_score:*</span> Oyunun eleştirmen puanını içerir (Genellikle 10 üzerinden).
+
+- <span style="color:blue;">*total_sales:*</span> Oyunun toplam satış miktarını içerir.
+
+- <span style="color:blue;">*na_sales:*</span> Oyunun Kuzey Amerika satış miktarını içerir.
+
+- <span style="color:blue;">*jp_sales:*</span> Oyunun Japonya satış miktarını içerir.
+
+- <span style="color:blue;">*pal_sales:*</span> Oyunun Avrupa satış miktarını içerir.
+
+- <span style="color:blue;">*other_sales:*</span> Oyunun diğer bölgelerdeki satış miktarını içerir.
+
+- <span style="color:blue;">*release_date:*</span> Oyunun piyasaya çıkış tarihini içerir.
+
+- <span style="color:blue;">*last_update:*</span> Veri setinin son güncelleme tarihini içerir.
+
+Veri seti, video oyunlarına ait çeşitli bilgilerin derlenmesi ve toplanması suretiyle oluşturulmuştur. Bu bilgilerin kaynağı, muhtemelen çeşitli oyun platformlarının ve yayıncıların resmi web siteleri, oyun incelemeleri ve satış verileri gibi kaynaklardır.
+
+**Verinin Formatı :** csv
+
+**Boyutu :** 2 MB
+
+IMS'e veriyi ithal etmek için, öncelikle veri setinin CSV formatındaki dosyasını IMS'in desteklediği bir veri aktarım aracı veya API üzerinden yüklemeyi planlayabiliriz.
+
+IMS'ten veriyi R ile çekmek için, IMS'in sağladığı API'yi kullanabiliriz. API, IMS veritabanına erişim sağlamak ve belirli sorgularla veri almak için kullanılabilir. Bu API'yi kullanarak, R programı aracılığıyla IMS'den istenen verileri çekebilir ve analiz için kullanabiliriz. Bunun için R dilinde API çağrılarını kullanarak veriyi çekmek için bir kod oluşturabiliriz.
+
 
 
 
