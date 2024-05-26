@@ -8,6 +8,30 @@ date: "2024-05-24"
 
 **Rame Games**, oyuncuların oyun alışkanlıklarını inceleyerek onlara daha eğlenceli ve bağımlılık yaratacak oyunlar sunmayı hedefleyen bir oyun şirketidir. Oyun geliştirme sürecinin başında oyuncuların oyunlardan beklentilerini, genel beğenilerini ve tercihlerini değerlendirmek adına 2024 verileri değerlendirilmek üzere seçilmiştir. Ancak kullanılacak olan SuiteCRM platformunda mapping işlemi esnasında yaşanan bir takım uyumsuzluklar ve 2024 yılının yalnızca dört aylık veri içeriyor olmasından kaynaklı olarak 2023 yılının 12 aylık verileri tercih edilmiştir. SuiteCRM, RESTful API aracılığıyla entegrasyonlar yapılmasına olanak tanır. API, SuiteCRM verilerine erişim ve veri manipülasyonu için kullanılabilir. SuiteCRM, müsteri ilişkileri yönetimi ve açık kaynaklı proje alanlarını bir araya getiren bir platformdur. Platform, Docker ile kurulabilme, hızlı bir şekilde geliştirme ve test ortamları oluşturmaya olanak verir. Docker, SuiteCRM'i hızlı bir şekilde dağıtıp kullanımı sağlayacak esnek bir altyapı sunar.
 
+## Q2: İş Problemini Çözmede Kullanılacak Data Seti
+
+Veriyi kaggle platformundan bulduk. 
+ 
+**Veri Seti linki =>**  https://www.kaggle.com/datasets/thedevastator/global-video-game-sales
+
+ Bu veri seti, 100.000 kopyadan fazla satışı olan video oyunlarının bir listesini içerir. Veri seti, vgchartz.com'dan kazınarak oluşturulmuştur.Hangi platformların global satışları yönlendirdiğini, farklı bölgelerde en başarılı türlerin neler olduğunu ve bu faktörlerin zaman içinde nasıl değiştiğini gözlemler. Bu verileri analiz ederek oyun sektörünü daha iyi anlayabilir ve oyun geliştiricilerinin başarıya ulaşmasını sağlayan trendleri keşfetmeye yarar.
+
+**Veri Setindeki Öznitelikler:**
+
+
+- <span style="color:cornflowerblue;"> *Rank:* </span> Oyunun global satışlara göre sıralaması. 
+- <span style="color:cornflowerblue;"> *Name:* </span> Oyunun adı. 
+- <span style="color:cornflowerblue;"> *Platform:* </span> Oyunun yayımlandığı platform. 
+- <span style="color:cornflowerblue;"> *Year:* </span> Oyunun yayımlandığı yıl. 
+- <span style="color:cornflowerblue;"> *Genre:* </span> Oyunun türü. 
+- <span style="color:cornflowerblue;"> *Publisher:* </span> Oyunun yayımlayıcısı. 
+- <span style="color:cornflowerblue;"> *NA_Sales:* </span> Oyunun Kuzey Amerika'daki satışları. 
+- <span style="color:cornflowerblue;"> *EU_Sales:* </span> Oyunun Avrupa'daki satışları. 
+- <span style="color:cornflowerblue;"> *JP_Sales:* </span> Oyunun Japonya'daki satışları. 
+- <span style="color:cornflowerblue;"> *Other_Sales:* </span> Oyunun diğer bölgelerdeki satışları.
+- <span style="color:cornflowerblue;"> *Global_Sales:* </span> Oyunun dünya genelindeki toplam satışları.
+
+Veri üzerinde öznitelik bilgilerinin hepsini küçük harf olarak düzenledik.
 
 
 
