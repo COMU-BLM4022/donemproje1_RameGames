@@ -260,6 +260,13 @@ Rame Games'in oyuncu etkileşimlerini optimize etmek, oyun performansını iyile
 
 - Belirli segmentlerin (örneğin, yüksek satışlı oyunlar) platform ve tür bazında dağılımlarını incelemek.
 
+## Q6 : Çalışan platformun gösterildiği sesli anlatımlı video
+
+**Video Linki : ** 
+
+*https://www.youtube.com/watch?v=pVM2XgaynU4*
+
+
 
 
 
