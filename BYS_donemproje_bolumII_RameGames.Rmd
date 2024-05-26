@@ -217,6 +217,11 @@ Veri setinde yer alan ilk 30 satıra göre tabloda çizdirildi. Bu tabloya göre
 - Publisher olarak Nintendo’nun 24 oyunu, Take-Two Interactive’in 4 oyunu, Sony Computer Entartainment’ın 1 oyunu, Microsoft Game Studios’un 1 oyunu yer almaktadır. Buna göre Nintendo hakimiyeti eline aldığı görülüyor.
 
 
+## Q4: Veri Setinin BYS Platformuna İthali
+
+Veri setimizi SuiteCRM platformuna entegre etmek için manuel import yöntemini kullanıldı ve belirli adımlar izlenildi. İlk olarak, SuiteCRM'e yönetici olarak giriş yapıldı ve "Admin" menüsünden "Module Builder" aracılığıyla "RameGames" adlı bir paket oluşturuldu.Bu paketin içine “Game1” adlı bir module oluşturuldu. Bu modülde, veri setinin sütun adlarını temsil eden alanları "Add Layouts" bölümünde “ListView” kısmında oluşturuldu ve mapping işlemi için gereken değişkenleri "Add Fields" kısmında eklendi. Sonrasında, CSV formatındaki veri seti bu modüle import edildi.
+Sütunlar otomatik olarak eşleştirildi ve veriler "Game1" sayfasında görünür hale getirildi. Bu adımlar sayesinde, veri seti SuiteCRM'e başarılı bir şekilde entegre edildi ve analizler için gerekli veriler platformda kullanılabilir hale getirildi.
+
 
 
 
