@@ -222,6 +222,43 @@ Veri setinde yer alan ilk 30 satıra göre tabloda çizdirildi. Bu tabloya göre
 Veri setimizi SuiteCRM platformuna entegre etmek için manuel import yöntemini kullanıldı ve belirli adımlar izlenildi. İlk olarak, SuiteCRM'e yönetici olarak giriş yapıldı ve "Admin" menüsünden "Module Builder" aracılığıyla "RameGames" adlı bir paket oluşturuldu.Bu paketin içine “Game1” adlı bir module oluşturuldu. Bu modülde, veri setinin sütun adlarını temsil eden alanları "Add Layouts" bölümünde “ListView” kısmında oluşturuldu ve mapping işlemi için gereken değişkenleri "Add Fields" kısmında eklendi. Sonrasında, CSV formatındaki veri seti bu modüle import edildi.
 Sütunlar otomatik olarak eşleştirildi ve veriler "Game1" sayfasında görünür hale getirildi. Bu adımlar sayesinde, veri seti SuiteCRM'e başarılı bir şekilde entegre edildi ve analizler için gerekli veriler platformda kullanılabilir hale getirildi.
 
+## Q5: Yapılması Planlanan Veri Analizi
+
+<span style="color:cornflowerblue;">**Amaç**<span>
+
+Rame Games'in oyuncu etkileşimlerini optimize etmek, oyun performansını iyileştirmek, teknik sorunları hızlıca tespit etmek ve pazarlama stratejilerini etkili bir şekilde geliştirmek amacıyla mevcut veri seti üzerinde kritik analizler yapılması planlandı. Bu analizler, SuiteCRM'den çekilen veriler kullanılarak R Studio'da gerçekleştirilecek ve çeşitli grafikler ve istatistiksel yöntemler ile desteklenecektir.
+
+<span style="color:cornflowerblue;">*Analiz Planı*<span>
+
+- Veri Hazırlığı ve Temizleme
+
+- Eksik verileri kontrol etmek ve gerekli temizleme işlemlerini yapmak.
+
+- Satış verilerinin (na_sales, eu_sales, jp_sales, other_sales, global_sales) doğru biçimde olduğundan emin olmak.
+
+<span style="color:cornflowerblue;">*Temel İstatistiksel Analizler*<span>
+
+- Satış verilerinin (na_sales, eu_sales, jp_sales, other_sales, global_sales) ortalama, medyan, minimum ve maksimum değerlerini hesaplamak.
+
+- Farklı platformlar, yıllar, türler bazında satış performansını analiz etmek.
+
+<span style="color:cornflowerblue;">*Grafiksel Analizler*<span>
+
+- Bar Grafikleri: Platform, tür bazında satış dağılımlarını göstermek.
+
+- Dağılım Grafikleri: Farklı bölgelerdeki (NA, EU, JP, Other) satışların global satışlarla ilişkisini incelemek.
+
+<span style="color:cornflowerblue;">*Kategorik Analizler*<span>
+
+- Platform, tür bazında satış performansını analiz etmek.
+
+- Farklı türlerin belirli platformlardaki başarı oranlarını incelemek.
+
+- Segmentasyon ve Kümelenme Analizleri
+
+- Satış verilerini kullanarak oyunları yüksek satışlı ve düşük satışlı olarak segmentlere ayırmak.
+
+- Belirli segmentlerin (örneğin, yüksek satışlı oyunlar) platform ve tür bazında dağılımlarını incelemek.
 
 
 
