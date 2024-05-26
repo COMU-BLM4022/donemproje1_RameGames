@@ -33,6 +33,189 @@ Veriyi kaggle platformundan bulduk.
 
 Veri üzerinde öznitelik bilgilerinin hepsini küçük harf olarak düzenledik.
 
+## Q3: Veri Seti Keşifsel Analizi
+
+*Veri setinde önemli sütunlar ve bunların veri tipleri şunlardır:*
+
+- <span style="color:cornflowerblue;"> *Rank:* </span> ( char )
+- <span style="color:cornflowerblue;"> *Name:* </span> ( char )
+- <span style="color:cornflowerblue;"> *Platform:* </span> ( char ) 
+- <span style="color:cornflowerblue;"> *Genre:* </span> ( char ) 
+- <span style="color:cornflowerblue;"> *Publisher:* </span> ( char ) 
+- <span style="color:cornflowerblue;"> *NA_Sales:* </span> ( numeric ) 
+- <span style="color:cornflowerblue;"> *EU_Sales:* </span> ( numeric ) 
+- <span style="color:cornflowerblue;"> *JP_Sales:* </span> ( numeric ) 
+- <span style="color:cornflowerblue;"> *Other_Sales:* </span> ( numeric )
+- <span style="color:cornflowerblue;"> *Global_Sales:* </span> ( numeric )
+
+
+```{r, results = 'hide', echo=FALSE}
+data <- read.csv("lastgame.csv")
+#satır sayısını öğrenme
+num_rows <- nrow(data)
+print(num_rows)
+
+#sutun sayısını öğrenme
+num_cols <- ncol(data)
+print(num_cols)
+
+```
+
+
+
+```{r, warning=FALSE,results = 'hide',echo=FALSE}
+#NA değer kontrolü
+na_sayisi <- sum(is.na(data))
+
+print(paste("Toplam Na deger sayisi:", na_sayisi))
+
+#sütün bazlı
+sutun_na_sayisi <- colSums(is.na(data))
+print(sutun_na_sayisi)
+
+#Na değerlerini silme
+data_clean <- na.omit(data)
+#Yeni veri çerçevesini görüntüle
+#print(data_clean)
+#sutun bazında tekrar konrol
+sutun_na <- colSums(is.na(data_clean))
+print(sutun_na)
+
+#Satır sayısını öğrenme
+num_rowsof <- nrow(data_clean)
+print(num_rowsof)
+
+#Sütun sayısını öğrenme
+num_colsof <- ncol(data_clean)
+print(num_colsof)
+
+```
+
+
+
+```{r, fig.width=10, fig.height=8, echo = FALSE, warning=FALSE, message=FALSE}
+#Sütunun benzersiz değerlerini ve sayısını bul
+unique_value <- unique(data_clean$platform)
+unique_value_sum <- length(unique_value)
+
+#Benzersiz değerleri ve sayılarını görüntüle
+#print(unique_value)
+#print(unique_value_sum)
+ 
+library(ggplot2)
+library(dplyr)
+#Sütunun frekans tablosunu oluştur
+frekans_tablosu <- table(data_clean$platform)
+
+frekans_tablosu <- data_clean %>%
+  count(platform) %>%
+  mutate(yuzde = n / sum(n) * 100) %>%
+  arrange(desc(yuzde)) %>%
+  slice(1:10)
+
+##renkler <- rainbow(length(unique(data_clean$platform)))
+#Pasta grafiğini oluşturun
+pasta_grafik <- ggplot(frekans_tablosu, aes(x = "", y = yuzde, fill = platform)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y", start = 0) +
+ scale_fill_brewer(palette = "Set1") +
+  theme_void() +
+  theme(legend.position = "right") +
+  labs(title = "En Yuksek Yuzdelik Degerlere Sahip 10 Platform") +
+  geom_text(aes(label = paste0(round(yuzde, 1), "%")), position = position_stack(vjust = 0.5)) +
+  theme(
+    plot.margin = unit(c(1, 1, 1, 1), "cm") # Kenar boşluklarını ayarla
+  )
+
+#Grafiği görüntüle
+print(pasta_grafik)
+
+```
+
+ Yapılan analiz sonrasında oluşturulan dairesel grafikte en yüksek değerlere sahip 10 platformun yüzdelik değerleri yer almaktadır. Grafikte PS2’nin %15.5’lik yüzdeyle tüm platformlar arasında en yüksek değere sahip olduğu gözlemlenmektedir. PS3 ve X360 onu takip eden diğer iki en yüksek platformlar arasında, geriye kalan platformlar ise %10’nun altında değerlere sahiptir. Grafikte %3.1’lik değere sahip PC ise en düşük değere sahip platform olduğu görülmektedir.
+
+
+```{r, fig.width=10, fig.height=8, echo = FALSE ,  warning=FALSE, message=FALSE}
+library(dplyr)
+library(ggplot2)
+
+top_ten_games <- data_clean %>%
+  arrange(rank) %>%
+  slice(1:10) %>%
+  select(name, global_sales)
+
+#Histogram grafiğini oluşturun
+hist_graph<-ggplot(top_ten_games, aes(x = reorder(name, global_sales), y = global_sales, fill = name)) +
+  geom_bar(stat = "identity") +
+  labs(title = "En cok Satan 10 Oyun",
+       x = "Oyun İsimleri",
+       y = "Global Satıslar") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_fill_brewer(palette = "Set3") +
+  guides(fill = "none") # Legendi kaldırır
+
+print(hist_graph)
+```
+
+ Oluşturulan sütun grafiğinde, en çok satan 10 oyunun global ölçekteki milyonluk satış değerleri yer almaktadır. Grafikte Wii Sport’un 80'in üstüne çıkarak en yüksek satışa sahip olduğu görülmektedir. Wii Sport’tan sonra en yüksek satışa sahip oyunun Duck Hunt’ın yaklaşık 30'a yakın satışa sahip olduğu ancak diğer oyunlarının hiçbirinin 10'un üstünde satış gerçekleştiremediği gözlemlenmektedir. 
+
+```{r,echo=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE)
+mean_values <- sapply(data_clean[, c("na_sales", "eu_sales", "jp_sales", "other_sales", "global_sales")], mean)
+median_values <- sapply(data_clean[, c("na_sales", "eu_sales", "jp_sales", "other_sales", "global_sales")], median)
+mode_values <- sapply(data_clean[, c("na_sales", "eu_sales", "jp_sales", "other_sales", "global_sales")], function(x) {
+  tbl <- table(x)
+  as.numeric(names(tbl)[which.max(tbl)])
+})
+
+#Sonuçları bir veri çerçevesine dönüştürme
+result_table <- data.frame(mean = mean_values, median = median_values, mode = mode_values)
+
+#Tabloyu HTML olarak yazdırma
+knitr::kable(result_table, caption = "SATIŞ  DEĞERLERİNİN ORTALAMASI, MEDYANI VE MODU")
+
+
+```
+
+ Bu tablo, farklı bölgelerdeki satış değerlerinin istatistiksel özetini sunmaktadır. İncelenen bölgeler Kuzey Amerika (NA), Avrupa (EU), Japonya (JP), diğer bölgeler (Other), ve küresel (Global) satışlardır. Tabloda her bölge için ortalama (mean), medyan (median) ve mod (mode) değerleri yer almaktadır.
+
+<span style="color:violet;"> **Mean(Ortalama):** </span> Mean veri setindeki tüm veri noktalarının toplamının toplam veri noktasına bölümü ile edilen bir “ortalama” sayıdır.
+
+<span style="color:violet;"> **Median(Ortanca Değer):** </span> Median sıralı bir veri setindeki orta değeri göstermektedir.
+
+<span style="color:violet;"> **Mode(Mod) :** </span> Mode bir veri setinde en sık gözlemlenen değeri göstermektedir.
+
+Bu tablodaki ortalama, medyan ve mod değerlerinin karşılaştırılması, farklı bölgelerdeki satış dağılımlarını daha iyi anlamamızı sağlar. Örneğin:
+
+- <span style="color:cornflowerblue;"> **Kuzey Amerika (NA) Satışları:** </span>  NA satışlarının ortalaması ve medyanı, bu bölgedeki satışların nasıl dağıldığını anlamamıza yardımcı olur.
+
+- <span style="color:cornflowerblue;"> **Avrupa (EU) Satışları:** </span>  EU satışlarının ortalama ve medyan değerleri, Avrupa pazarının Kuzey Amerika ile kıyaslandığında nasıl bir performans sergilediğini gösterir.
+
+- <span style="color:cornflowerblue;"> **Japonya (JP) Satışları:** </span> JP satışlarındaki ortalama ve medyan değerlerinin diğer bölgelerle karşılaştırılması, Japonya'nın pazardaki konumunu değerlendirmemize yardımcı olur.
+
+- <span style="color:cornflowerblue;"> **Diğer Bölgeler ve Küresel Satışlar:** </span> Diğer bölgeler ve küresel satışlar için hesaplanan değerler, bu bölgelerin toplam satışlar içindeki payını gösterir.
+
+Genel olarak tablodaki satış verilerine göre pozitif çarpıklık söz konusudur. Ortalama medyandan büyük olduğu için, bu veri setinin sağa çarpık olduğunu söylenebilir. Aynı zamanda satışların çoğunluğu ortalama satış değerinin altında yoğunlaşmış, ancak bazı yüksek satış değerleri ortalamayı artırmıştır.
+Bu değerlendirmeler, satış stratejilerini belirlerken ve bölgesel pazarların önemini analiz ederken faydalı olacaktır.
+
+
+```{r,echo=FALSE}
+library(knitr)
+#İlk 30 veriyi almak
+data_head <- head(data_clean, 30)
+
+#Tabloyu HTML olarak yazdırma
+knitr::kable(data_head, caption = "VERİ SETİNDEKİ İLK 30 VERİ")
+```
+
+Veri setinde yer alan ilk 30 satıra göre tabloda çizdirildi. Bu tabloya göre:
+
+- Birinci sırada yer alan Wii Sports oyunu global satışlarda birinci sıraya sahipken Japonya’daki satışlarında diğer eyaletlere göre geride kaldığı görülmektedir.
+
+- Publisher olarak Nintendo’nun 24 oyunu, Take-Two Interactive’in 4 oyunu, Sony Computer Entartainment’ın 1 oyunu, Microsoft Game Studios’un 1 oyunu yer almaktadır. Buna göre Nintendo hakimiyeti eline aldığı görülüyor.
+
 
 
 
