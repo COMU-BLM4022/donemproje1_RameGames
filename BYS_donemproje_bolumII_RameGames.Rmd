@@ -1,0 +1,39 @@
+---
+title: "Bilgi Yönetim Sistemleri - Bitirme Projesi Rapor : Simge Buse Kaplan-210401011, Elif Avcı-200401073, Tesnim Strazimiri- 200401115, Sevim Kendir-190401079"
+output: html_document
+date: "2024-05-24"
+---
+
+## Q1: İş probleminin tanımı 
+
+**Rame Games**, oyuncuların oyun alışkanlıklarını inceleyerek onlara daha eğlenceli ve bağımlılık yaratacak oyunlar sunmayı hedefleyen bir oyun şirketidir. Oyun geliştirme sürecinin başında oyuncuların oyunlardan beklentilerini, genel beğenilerini ve tercihlerini değerlendirmek adına 2024 verileri değerlendirilmek üzere seçilmiştir. Ancak kullanılacak olan SuiteCRM platformunda mapping işlemi esnasında yaşanan bir takım uyumsuzluklar ve 2024 yılının yalnızca dört aylık veri içeriyor olmasından kaynaklı olarak 2023 yılının 12 aylık verileri tercih edilmiştir. SuiteCRM, RESTful API aracılığıyla entegrasyonlar yapılmasına olanak tanır. API, SuiteCRM verilerine erişim ve veri manipülasyonu için kullanılabilir. SuiteCRM, müsteri ilişkileri yönetimi ve açık kaynaklı proje alanlarını bir araya getiren bir platformdur. Platform, Docker ile kurulabilme, hızlı bir şekilde geliştirme ve test ortamları oluşturmaya olanak verir. Docker, SuiteCRM'i hızlı bir şekilde dağıtıp kullanımı sağlayacak esnek bir altyapı sunar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
